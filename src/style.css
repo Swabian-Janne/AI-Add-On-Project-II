@@ -1,6 +1,17 @@
 /** @format */
 
 body {
-  background: mediumspringgreen;
+  /**background */
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/179/162/original/AI_dichter_Denker_realm.png?1774038738");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /**text */
+  color: white;
   text-align: center;
+  h1 {
+    font-size: 60px;
+    margin-top: 400px;
+    font-family: "Beau Rivage", cursive;
+  }
 }
