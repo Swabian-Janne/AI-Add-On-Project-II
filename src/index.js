@@ -8,15 +8,23 @@ function generatePoem(event) {
 
   //import Typewriter from "typewriter-effect/dist/core";
 
-new Typewriter(poemElement, {
-    strings: ["Was bedächtlich Natur sonst unter viele verteilet"],
+  //ew Typewriter(poemElement, {
+  //strings: ["Was bedächtlich Natur sonst unter viele verteilet"],
+  // autoStart: true,
+  //delay: 50
+  //cursor: "",
+  //loop: false,
+  // });
+  let typewriter = new Typewriter(poemElement, {
     autoStart: true,
-    delay: 50
+    delay: 50,
     cursor: "",
-    loop: false,
   });
-  
 
+  typewriter
+    .typeString("Was bedächtlich Natur sonst unter viele verteilet")
+    .pauseFor(1000000) // basically "never delete"
+    .start();
 }
 
 let poemFormElement = document.querySelector("#poem-form");
