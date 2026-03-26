@@ -4,17 +4,15 @@ function generatePoem(event) {
   event.preventDefault();
   let poemElement = document.querySelector("#poem");
   poemElement.innerHTML = "";
-  //is not needed because of the typewriter effect, which will display the message as it is being generated.
 
-  //import Typewriter from "typewriter-effect/dist/core";
-
-  //ew Typewriter(poemElement, {
+  //new Typewriter(poemElement, {
   //strings: ["Was bedächtlich Natur sonst unter viele verteilet"],
   // autoStart: true,
   //delay: 50
   //cursor: "",
   //loop: false,
-  // });
+  // }); somehow doesn't work, so I use the "start" method instead of "strings" and "loop"
+
   let typewriter = new Typewriter(poemElement, {
     autoStart: true,
     delay: 50,
