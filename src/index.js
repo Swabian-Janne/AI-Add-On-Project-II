@@ -14,18 +14,18 @@ function displayPoem(response) {
 function generatePoem(event) {
   event.preventDefault();
 
-  
   //build the API URL
   let instructionsInput = document.querySelector("#user-instructions"); //connect new class & id with the input field in the HTML
   let apiKey = "ef3aab353f2ado9faa8tccd552b00647";
   let prompt = `User instructios: Generate a German poem about ${instructionsInput.value}.`;
+  // giving the AI a "persona" to write in a specific style, so that the output is more accurate and relevant to the user's input
   let context =
-    "You are a poet who writes in the style of Goethe and other famous German poets of this time period. Your mission is to generate a 4 line poem in basic HTML. Do not use a title. Make sure to follow the user instructions."; // giving the AI a "persona" to write in a specific style, so that the output is more accurate and relevant to the user's input
+    "You are a poet who writes in the style of Goethe and other famous German poets of this time period. Your mission is to generate a 4 line poem. Do not use a title. Sign your poem  at the end with '🍍'. Make sure to follow the user instructions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}}&context=${context}&key=${apiKey}`;
 
   console.log("generating poem...");
-  console.log('Prompt: ${prompt}');
-  console.log('Context: ${context}');
+  console.log("Prompt: ${prompt}");
+  console.log("Context: ${context}");
 
   // make call to the API with axios
   axios.get(apiUrl).then(displayPoem);
