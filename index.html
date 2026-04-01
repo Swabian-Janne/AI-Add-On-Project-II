@@ -21,14 +21,17 @@
             <h1>AI German Poem Generator</h1>
         </header>
         <main>
-            <form id="poem-generator-form">
-                <input class="instructions" id="user-instructions" type="text"
-                    placeholder="Enter a theme for your German poem..." autofocus required autocomplete="off" />
+            <div class="form-container">
+                <form class="poem-form" id="poem-generator-form">
+                    <input class="instructions" id="user-instructions" type="text"
+                        placeholder="Enter a theme for your German poem..." autofocus required autocomplete="off" />
 
-                <input type="submit" class="submit-btn" />
-            </form>
-            <div class="poem" id="poem">
+                    <input type="submit" class="submit-btn" />
+                </form>
+                <div class="hint"> z.B.: Liebe, Natur, Freundschaft</div>
             </div>
+            <div class="poem" id="poem"> </div>
+
         </main>
         <footer> This AI Project was coded with 🍍-Power and is on <a
                 href="http://github.com/Swabian-Janne/AI-Add-On-Project-II.git" target="_blank">

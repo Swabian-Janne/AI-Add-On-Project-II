@@ -41,12 +41,32 @@ a {
 /*classes*/
 .container {
   margin: 120px auto;
+  margin-bottom: 0px;
   max-width: 600px /*makes it centerd and not too wide*/;
 }
 
+.form-container {
+  margin-bottom: 20px;
+}
+
+.poem-form {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.hint {
+  line-height: 1.5;
+  color: white;
+  margin-top: 5px;
+  margin-left: 50px;
+  opacity: 0.6;
+  font-size: 12px;
+}
 .instructions {
   flex: 1;
   padding: 10px;
+  padding-bottom: 0px
+    /*reduces the space between the input field and the hint text*/;
   font-size: 16px;
   border: 2.5px solid #12472e;
   border-radius: 50px;
